@@ -1,8 +1,10 @@
 import numpy as np
 import tensorflow as tf
 
-
-tra = tf.keras.utils.image_dataset_from_directory(
+'''  defining the training setand validation set from a folder on google colab  
+    
+'''
+train_set = tf.keras.utils.image_dataset_from_directory, 
 directory = ("./output_folder/Final images/train"),
 labels = "inferred",
 label_mode = "categorical",
@@ -11,6 +13,7 @@ batch_size = 8,
 image_size = (512,512),
 shuffle = True,
 seed = 42)
+
 
 validation_set = tf.keras.utils.image_dataset_from_directory(
 directory = ("./output_folder/Final images/val"),
